@@ -1,0 +1,11 @@
+You are required to develop a ReactJs (or VueJs) application.
+
+When the application loads, it must display a splash screen with the Quicklc8 Logo displayed.
+
+The splash screen must display for 3.5 seconds.
+
+After the splash screen, a map showing taxi icons at specified locations facing the correct direction. 
+The Locations and directions are in the file vehicleCoordinates.json. See vehicleLocations.png for example of how the map with locations should look.
+
+There must be a link that redirects users to the messages screen. The messages to be displayed are in messages.json
+
