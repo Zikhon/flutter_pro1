@@ -17,7 +17,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   navigateToMap() async {
     await Future.delayed(Duration(milliseconds: 3500));
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MapScreen()));
+    Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+            builder: (context) => MapScreen(-33.9685533, 18.5662383)));
   }
 
   @override
@@ -46,6 +49,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-
-
-
