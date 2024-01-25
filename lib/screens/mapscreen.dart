@@ -1,7 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_pro1/main.dart';
+// import 'package:flutter_pro1/main.dart';
+import 'package:flutter_pro1/screens/home_screen.dart';
+// import 'package:flutter_pro1/screens/splash_screen.dart';
+// import 'home.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:location/location.dart' as loc;
@@ -12,6 +15,8 @@ import 'dart:math' show cos, sqrt, asin;
 class MapScreen extends StatefulWidget {
 final double lat;
 final double lng;
+// String controller=43243243;
+
 MapScreen(this.lat, this.lng);
 
   @override
@@ -64,7 +69,7 @@ class _MapScreenState extends State<MapScreen> {
                   child: GestureDetector(
                     onTap: () {
                       Navigator.of(context).pushAndRemoveUntil(
-                          MaterialPageRoute(builder: (context) => MyApp()),
+                          MaterialPageRoute(builder: (context) => HomeScreen()),
                           (route) => false);
                     },
                     child: Icon(Icons.arrow_back),
@@ -158,7 +163,7 @@ class _MapScreenState extends State<MapScreen> {
     List<LatLng> polylineCoordinates = [];
     List<dynamic> points = [];
     PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
-        'YOUR_API_KEY',
+        'AIzaSyBF7TYv21sJ_nNqBX1EgUF0Pcd7hjwLKwU',
         PointLatLng(curLocation.latitude, curLocation.longitude),
         PointLatLng(dst.latitude, dst.longitude),
         travelMode: TravelMode.driving);
@@ -177,7 +182,7 @@ class _MapScreenState extends State<MapScreen> {
     PolylineId id = PolylineId('poly');
     Polyline polyline = Polyline(
       polylineId: id,
-      color: Colors.blue,
+      color: Colors.green,
       points: polylineCoordinates,
       width: 5,
     );

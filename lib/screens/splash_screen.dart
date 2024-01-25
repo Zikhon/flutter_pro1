@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'mapscreen.dart';
+import 'home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) => MapScreen(-33.9685533, 18.5662383)));
+            builder: (context) => HomeScreen()));
   }
 
   @override
