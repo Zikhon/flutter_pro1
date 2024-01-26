@@ -14,18 +14,17 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFFFF5722),
-        leading: SizedBox(
-          height: 100,
-          width: 100,
+        leading: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             Image.asset(
               'Images/Quicloc8-logo.png',
               fit: BoxFit.contain,
             ),
-          ]),
+          ],),
         ),
       ),
       body: Padding(

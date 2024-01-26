@@ -43,7 +43,9 @@ class _MapScreenState extends State<MapScreen> {
  
    @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  MaterialApp(
+    
+    home:Scaffold(
       body: sourcePosition == null
           ? Center(child: CircularProgressIndicator())
           : Stack(
@@ -98,6 +100,7 @@ class _MapScreenState extends State<MapScreen> {
                     ))
               ],
             ),
+    ),
     );
   }
 
