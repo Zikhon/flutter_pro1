@@ -1,10 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-// import 'package:flutter_pro1/main.dart';
 import 'package:flutter_pro1/screens/home_screen.dart';
-// import 'package:flutter_pro1/screens/splash_screen.dart';
-// import 'home.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:location/location.dart' as loc;
@@ -15,7 +11,7 @@ import 'dart:math' show cos, sqrt, asin;
 class MapScreen extends StatefulWidget {
 final double lat;
 final double lng;
-// String controller=43243243;
+
 
 MapScreen(this.lat, this.lng);
 
@@ -84,7 +80,7 @@ class _MapScreenState extends State<MapScreen> {
                       width: 50,
                       height: 50,
                       decoration: BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.blue),
+                          shape: BoxShape.circle, color: Color(0xFFFFCCBC)),
                       child: Center(
                         child: IconButton(
                           icon: Icon(
@@ -153,7 +149,7 @@ class _MapScreenState extends State<MapScreen> {
                               .toStringAsFixed(2)))} km'
                      ),
               onTap: () {
-                print('market tapped');
+                print('place tapped');
               },
             );
           });
@@ -185,7 +181,7 @@ class _MapScreenState extends State<MapScreen> {
     PolylineId id = PolylineId('poly');
     Polyline polyline = Polyline(
       polylineId: id,
-      color: Colors.green,
+      color: Color(0xFFFFCCBC),
       points: polylineCoordinates,
       width: 5,
     );
@@ -213,7 +209,7 @@ class _MapScreenState extends State<MapScreen> {
         markerId: MarkerId('source'),
         position: curLocation,
         icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueAzure),
-        // icon: BitmapDescriptor.fromAsset('Images/vehicleLocations.png'),
+      
 
       );
       destinationPosition = Marker(

@@ -63,12 +63,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Container(
               width: double.infinity,
-              margin: EdgeInsets.all(16.0), // Add margin for spacing
+              margin: EdgeInsets.all(16.0), 
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  // Add style for the button
-                  primary: Color(0xFFF36E21), // Background color
-                  onPrimary: Colors.white, // Text color
+                  backgroundColor: Color(0xFFF36E21), 
+                  onPrimary: Colors.white,
                 ),
                 onPressed: () {
                   if (isValidInput()) {
