@@ -1,23 +1,3 @@
-// import 'package:flutter/material.dart';
-
-// class HomeScreen extends StatelessWidget {
-//   const HomeScreen({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text('My App'),
-       
-      
-//       ),
-//       body: const Center(
-//         child: Text('Welcome'),
-//       ), 
-//     );
-//   }
-// }
-
 
 import 'package:flutter/material.dart';
 import 'mapscreen.dart';
@@ -35,14 +15,22 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Flutter uber'),
-      ),
+     appBar: AppBar(
+  backgroundColor: Color(0xFFCCBC),
+  leading: SizedBox(
+    height: 100,
+    width: 100,
+    child: Image.asset(
+      'Images/Quicloc8-logo.png',
+       fit: BoxFit.contain,
+          ),
+       ),
+     ),
       body: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Text(
-            'Enter your location',
+            'Where do you want to go?',
             style: TextStyle(fontSize: 40),
           ),
           SizedBox(
@@ -77,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           double.parse(latController.text),
                           double.parse(lngController.text))));
                 },
-                child: Text('Get Directions')),
+                child: Text('Get your destination!!')),
           ),
         ]),
       ),
