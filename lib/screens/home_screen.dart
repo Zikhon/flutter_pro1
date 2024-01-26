@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'mapscreen.dart';
 
@@ -17,17 +16,16 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(0, 161, 56, 24),
+        backgroundColor: Color(0xFFFF5722),
         leading: SizedBox(
           height: 100,
           width: 100,
-          
-          child: Column(mainAxisAlignment: MainAxisAlignment.end, children: [
-            Image.asset('Images/Quicloc8-logo.png',
-            fit: BoxFit.contain,
-          ),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Image.asset(
+              'Images/Quicloc8-logo.png',
+              fit: BoxFit.contain,
+            ),
           ]),
-      
         ),
       ),
       body: Padding(
@@ -64,39 +62,38 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 20,
             ),
-
             Container(
-  width: double.infinity,
-  margin: EdgeInsets.all(16.0),  // Add margin for spacing
-  child: ElevatedButton(
-    style: ElevatedButton.styleFrom(
-      // Add style for the button
-      primary:Color(0xFFF36E21),// Background color
-      onPrimary: Colors.white,  // Text color
-    ),
-    onPressed: () {
-      if (isValidInput()) {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => MapScreen(
-              double.parse(latController.text),
-              double.parse(lngController.text),
+              width: double.infinity,
+              margin: EdgeInsets.all(16.0), // Add margin for spacing
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  // Add style for the button
+                  primary: Color(0xFFF36E21), // Background color
+                  onPrimary: Colors.white, // Text color
+                ),
+                onPressed: () {
+                  if (isValidInput()) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => MapScreen(
+                          double.parse(latController.text),
+                          double.parse(lngController.text),
+                        ),
+                      ),
+                    );
+                  } else {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content:
+                            Text('Please enter valid latitude and longitude'),
+                        backgroundColor: Color(0xFFFE2A39),
+                      ),
+                    );
+                  }
+                },
+                child: Text('Get your destination!!'),
+              ),
             ),
-          ),
-        );
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Please enter valid latitude and longitude'),
-            backgroundColor:Color.fromARGB(255, 253, 8, 8),
-          ),
-        );
-      }
-    },
-    child: Text('Get your destination!!'),
-  ),
-),
-
           ],
         ),
       ),
