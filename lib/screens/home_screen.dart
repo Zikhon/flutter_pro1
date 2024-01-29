@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Text(
-              'Where do you want to go?',
+              'where do you want to go?',
               style: TextStyle(fontSize: 40),
             ),
             SizedBox(
