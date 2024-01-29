@@ -149,7 +149,7 @@ class _MapScreenState extends State<MapScreen> {
                               .toStringAsFixed(2)))} km'
                      ),
               onTap: () {
-                print('place tapped');
+                print('choose place');
               },
             );
           });
