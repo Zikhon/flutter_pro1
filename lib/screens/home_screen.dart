@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     );
                   }
                 },
-                child: Text('Go to your place!!'),
+                child: Text('Get your destination!!'),
               ),
             ),
           ],
